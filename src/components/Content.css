@@ -1,0 +1,72 @@
+.content {
+  height: 100vh;
+  border: solid;
+  margin: 10px 10px 10px 10px;
+}
+.calculator {
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.output_screen {
+  border: solid 1px;
+  width: 200px;
+  display: flex;
+  justify-content: flex-end;
+}
+.single_row {
+  display: flex;
+  width: 200px;
+}
+
+.single_value {
+  flex: 0.25;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px;
+}
+
+.numbers {
+  background-color: cadetblue;
+}
+.operators {
+}
+.equals {
+  background-color: rgb(117, 205, 117);
+}
+
+.clear {
+  background-color: rgb(191, 78, 78);
+}
+
+.single_value:hover {
+  background-color: aqua;
+}
+
+.nav {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: aqua;
+}
+.tabs {
+  flex: 1;
+  text-align: center;
+  border: solid 1px;
+  font-size: 20px;
+}
+.tabs:hover,
+.tabs:focus,
+.tabs:active {
+  background-color: aliceblue;
+}
+.tabs:focus-visible {
+  background-color: red;
+}
+/* .tab_active {
+  background-color: red;
+} */

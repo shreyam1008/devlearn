@@ -1,0 +1,30 @@
+.header {
+  background-color: rgb(102, 81, 147);
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.logo_image {
+  flex: 0.5;
+  /* background-color: beige; */
+}
+.user_image {
+  flex: 0.1;
+}
+
+.site_name {
+  flex: 0.4;
+  /* background-color: aqua; */
+  color: orange;
+  font-weight: bold;
+  font-size: 25px;
+  text-transform: uppercase;
+}
