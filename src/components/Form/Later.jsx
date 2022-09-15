@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Card from "../Common/Card";
-// import Input from "./Input";
 import "./Later.css";
 
 const Later = () => {
@@ -41,6 +41,9 @@ const Later = () => {
       {peoples.map((people) => (
         <Card key={people.name} name={people.name} address={people.location} />
       ))}
+      <Link to="/test">
+        <div>Link</div>
+      </Link>
     </div>
   );
 };

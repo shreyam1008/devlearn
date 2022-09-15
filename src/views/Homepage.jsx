@@ -1,18 +1,12 @@
-import { useEffect } from "react";
 import Content from "../components/Content";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-
-// framework
-
-// library
+import Layout from "../Layout/Layout";
 
 const Homepage = () => {
   return (
     <>
-      <Header />
-      <Content />
-      <Footer />
+      <Layout>
+        <Content />
+      </Layout>
     </>
   );
 };

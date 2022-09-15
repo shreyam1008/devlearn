@@ -1,8 +1,11 @@
 import React, { Suspense, useState } from "react";
+import { Link } from "react-router-dom";
+import Layout from "../Layout/Layout";
 import Calculator from "./Calculator/Calculator";
 // import Later from "./Later";
 import "./Content.css";
-const Later = React.lazy(() => import("./Form/Later"));
+import Later from "./Form/Later";
+// const Later = React.lazy(() => import("./Form/Later"));
 
 const Content = () => {
   const [activeNavbar, setActiveNavbar] = useState("calc");
@@ -14,9 +17,9 @@ const Content = () => {
             className={`tabs  ${
               activeNavbar === "calc" ? "tab_active" : "tab_disabled"
             }`}
-            onClick={() => setActiveNavbar("calc")}
+            // onClick={() => setActiveNavbar("calc")}
           >
-            Calculator
+            <Link to="/calculator">Calculator</Link>
           </div>
           <div
             className={`tabs ${
@@ -24,10 +27,12 @@ const Content = () => {
             }`}
             onClick={() => setActiveNavbar("later")}
           >
-            From
+            <Link to="/form">From</Link>
           </div>
         </div>
+        {/* <Layout> */}
         {activeNavbar === "calc" ? <Calculator /> : <Later />}
+        {/* </Layout> */}
       </div>
     </Suspense>
   );
