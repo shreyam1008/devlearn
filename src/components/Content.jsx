@@ -17,7 +17,7 @@ const Content = () => {
             className={`tabs  ${
               activeNavbar === "calc" ? "tab_active" : "tab_disabled"
             }`}
-            // onClick={() => setActiveNavbar("calc")}
+            onClick={() => setActiveNavbar("calc")}
           >
             <Link to="/calculator">Calculator</Link>
           </div>

@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useUserContext } from "../../context/userContext";
 import Card from "../Common/Card";
 import "./Later.css";
 
 const Later = () => {
-  // const peoples = [
-  //   {name: "shreyamn", location: "babarmahal"},
-  // ]
-
+  const { increaseBalance } = useUserContext();
   const [peoples, setPeoples] = useState([
     { name: "shreyam", location: "babarmahal" },
   ]);
@@ -21,7 +19,7 @@ const Later = () => {
       ...peoples,
       { name: name, location: location },
     ]);
-    // [...peoples, {name:name, location: location}]
+    [...peoples, { name: name, location: location }];
     setPeoples((previousValue) => [
       ...previousValue,
       { name: name, location: location },
@@ -35,6 +33,7 @@ const Later = () => {
     const newPeopleList = peoples.filter((people) => people.name !== name);
     setPeoples(newPeopleList);
     console.log("new list", newPeopleList);
+    increaseBalance(50);
   };
 
   return (
@@ -63,13 +62,13 @@ const Later = () => {
       </div>
       {peoples.map((people) => (
         // <Card key={people.name} name={people.name} address={people.location} />
-
         <div
           style={{
             height: "100px",
             width: "100px",
             border: "solid 1px red",
           }}
+          key={people.name}
         >
           Name: {people.name} Location: {people.location}
           <button onClick={() => handleDeleteButton(people.name)}>

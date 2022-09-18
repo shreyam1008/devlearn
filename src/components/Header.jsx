@@ -1,9 +1,13 @@
 import "./Header.css";
 
 import logo from "../assets/images/logo.png";
-import user from "../assets/images/user.png";
+import userImg from "../assets/images/user.png";
+import { UserContext, useUserContext } from "../context/userContext";
+import { useContext } from "react";
 
 const Header = () => {
+  // const { user } = useUserContext();
+  const { user, a } = useContext(UserContext);
   return (
     <header className="header">
       <div className="logo_image">
@@ -11,7 +15,8 @@ const Header = () => {
       </div>
       <div className="site_name"> we learn </div>
       <div className="user_image">
-        <img src={user} alt="users" height="50px" />
+        -{user.name}- -{user.balance}
+        <img src={userImg} alt="users" height="50px" />
       </div>
     </header>
   );
